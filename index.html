@@ -4,13 +4,20 @@
     <meta charset="UTF-8">
     <title>Vue JS</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <div id="app">
         <h1 class="title">{{name}}</h1>
         <p class="description">{{description}}</p>
-        
+        <form action="#">
+            <h3 class="form-title">Введите данные</h3>
+            <label for="last-name" class="form-label">Введите Фамилию:</label>
+            <input v-model="last_name" type="text" id="last-name" class="text-input"v-bind:placeholder="placeholder_last_name"required>
+            <label for="last-name" class="form-label">Введите Имя:</label>
+            <input v-model="first_name" type="text" id="first-name" class="text-input" v-bind:placeholder="placeholder_first_name" required>
+            <input type="button" class="btn-input" value="Отправить">
+        </form>
         
     </div>
 <script src="js/vue.min.js"></script>
