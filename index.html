@@ -16,9 +16,14 @@
             <input v-model="last_name" type="text" id="last-name" class="text-input"v-bind:placeholder="placeholder_last_name"required>
             <label for="last-name" class="form-label">Введите Имя:</label>
             <input v-model="first_name" type="text" id="first-name" class="text-input" v-bind:placeholder="placeholder_first_name" required>
-            <input type="button" class="btn-input" value="Отправить">
+            <input type="button" class="btn-input" v-on:click="get_Data()" value="Отправить">
         </form>
-        
+        <span class="student-list-title">Список студентов:</span>
+        <span v-if="i==0">Список пуст</span>
+        <div class="bgcs">
+            <ul class="student-list" v-html="html"></ul>
+        </div>
+        <ul class="student-list l2" v-html="html"></ul>
     </div>
 <script src="js/vue.min.js"></script>
 <script src="js/main.js"></script>

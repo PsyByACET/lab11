@@ -3,7 +3,7 @@ new Vue({
     data: {
         name: 'Система учетов студентов',
         description: 'Добро пожаловать в систему учёта посещаемости студентов. Здесь вы можете  \n' +
-            '            отслеживать посещаемость студентов',
+            '            gitотслеживать посещаемость студентов',
             title: 'Student9000',
             last_name: '',
             first_name: '',
@@ -13,5 +13,14 @@ new Vue({
             html: '',
             i: 0,
             student: '<li class="student-list-item">' + this.last_name + this.first_name + '</li>',
+    },
+    methods: {
+        get_Data: function () {
+            if (this.last_name != '' && this.first_name != ''){
+                this.i++
+                this.html +='<li class="student-list-item">' + this.i + ') ' + this.last_name + ' ' + this.first_name + '</li>'
+            }
+
+        }
     }
 })
